@@ -1,0 +1,51 @@
+{{!-- Tu código HTML --}}
+<div class="wrapper">
+  <div class="content-wrapper">
+    <h2 class="TITULO2">Sistema fotovoltaico OFF GRIND</h2>
+    <p>
+      A continuación, ingrese los datos para calcular los paneles, baterías e inversor.
+    </p>
+    <form action="/electrodomesticos/guardar_datos" method="post" id="formulario" class="formulario">
+    <div class="SOLAR">
+      <input type="number" name="Radiacion" class="radiacion-input" placeholder="Radiacion (w/m^2)" required>
+      <input type="number" name="Bateria" class="bateria-input" placeholder="Bat. Voltaje" required>
+      <input type="number" name="Autonomia" class="autonomia-input" placeholder="Autonomia" required>
+      <input type="number" name="Panel" class="panel-input" placeholder="Voltaje Pico Panel" required>
+      <input type="number" name="Capacidad" class="capacidad-input" placeholder="Bat. Capacidad" required>
+      <input type="number" name="HorasPico" class="horaspico-input" placeholder="Horas Pico" required>
+      </div>
+
+<form action="/electrodomesticos/guardar_datos" method="post" id="formulario" class="formulario">
+  <table>
+    <tr>
+      <th>Nombre electrodoméstico</th>
+      <th>Consumo</th>
+      <th>Horas de uso</th>
+      <th>Cantidad</th>
+    </tr>
+    <tr class="electrodomestico">
+      <td><input type="text" name="nombre[]" class="nombre-input" placeholder="Ingrese el nombre del electrodoméstico" required></td>
+      <td><input type="number" name="consumo[]" class="consumo-input" placeholder="Ingrese el consumo en Watts" required></td>
+      <td><input type="number" name="horas[]" class="horas-input" placeholder="Ingrese las horas de uso" required></td>
+      <td><input type="number" name="cantidad[]" class="cantidad-input" placeholder="Ingrese la cantidad" required></td>
+    </tr>
+  </table>
+
+  <button type="button" id="agregar">Agregar otro electrodoméstico</button>
+
+  <button type="submit">Guardar datos</button>
+</form>
+
+
+    <script>
+      document.getElementById('agregar').addEventListener('click', function() {
+        var nuevoElectrodomestico = document.querySelector('.electrodomestico').cloneNode(true);
+        nuevoElectrodomestico.querySelectorAll('input').forEach(input => input.value = '');
+        document.getElementById('formulario').insertBefore(nuevoElectrodomestico, this);
+      });
+    </script>
+
+  </div>
+</div>
+
+

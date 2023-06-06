@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <h1>Resultados de los cálculos</h1>
+    <ul>
+      {{#each resultados}}
+        <li>
+          <h2>{{this.referencia}}</h2>
+          <ul>
+            <li>Consumo total: {{this.consumoTotal}}</li>
+            {{!-- <li>Baterías Potencia: {{this.bateriasPot}}</li>
+            <li>Baterías Corriente: {{this.bateriasCorr}}</li> --}}
+            <li>Número de Baterías: {{this.numBaterias}}</li>
+            <li>Número de Paneles: {{this.numPaneles}}</li>
+            <li>Inversor: {{this.inversor}}</li>
+          </ul>
+          <form action="/resultados/{{this._id}}?_method=DELETE" method="POST">
+          <button type="submit">Eliminar</button>
+          </form>
+        </li>
+      {{/each}}
+    </ul>
+    <p>
+    Para ir a inicio has clic aqui
+    <a href="/home" class="btn btn-primary">Home</a>
+    </p>
+  </div>
+</div>
+
+

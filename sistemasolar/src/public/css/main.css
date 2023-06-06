@@ -1,0 +1,67 @@
+  body {
+  background: #2a397c;  
+  background: -webkit-linear-gradient(to right, #abadda, #185dc4); 
+  background: linear-gradient(to right, #3a88ee, #878b87); 
+}  
+.logo {
+  width: 50%;
+} 
+.Solar {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.TITULO{
+  text-align: center;
+}
+.TITULO2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* Estilos para el formulario */
+.formulario {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Estilos para los elementos del formulario */
+.electrodomestico input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.SOLAR {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada */
+.SOLAR input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
